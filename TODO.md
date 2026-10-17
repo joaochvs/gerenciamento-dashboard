@@ -31,6 +31,7 @@
 
 ## Concluído recentemente
 
+- [x] Adicionar resumo das tarefas abertas ao consultar a contagem de pendências no cartão da galeria.
 - [x] Aplicar direção visual clean/grafite ao mockup interativo, reduzindo informação na galeria e mantendo detalhes acessíveis dentro do dashboard.
 - [x] Trocar seletor de etapa por arraste de cartões no mockup, preservando a abertura atual do quadro.
 - [x] Revisar proposta conforme desenhos do usuário: galeria com prévias e pendências no cartão, quadro por dashboard e preenchimento interno.

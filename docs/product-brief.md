@@ -11,6 +11,7 @@ Organizar dashboards Power BI de vários projetos, suas regras, atualizações e
 - Cartões aproximadamente quadrados com captura/prévia visual do dashboard.
 - Nome, projeto, última atualização dos dados e última mudança no relatório.
 - Pendências visíveis no próprio cartão.
+- Contagem de pendências mostra resumo ao passar o mouse, focar pelo teclado ou tocar: até três títulos de tarefas abertas com suas etapas e indicação de itens adicionais. Tarefas em Feito não entram. Consulta não abre o dashboard; a prévia/nome continua abrindo o quadro.
 - Sinais de cor acompanhados de texto: em dia, com pendências e atualização atrasada.
 - Ao clicar, abrir o espaço de trabalho do dashboard.
 

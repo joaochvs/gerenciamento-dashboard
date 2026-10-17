@@ -9,5 +9,5 @@ Atualizado em: 2026-10-17.
 - **Problemas conhecidos:** sem CI, build, lint, testes ou deploy. Compatibilidade executável com Vercel não verificável ainda.
 - **Arquitetura atual:** repositório documental; frontend, backend, banco e integrações ausentes.
 - **Dependências importantes:** Git para versionamento; contas/acessos GitHub, Codex Cloud e Vercel para o fluxo externo. Nenhuma dependência de aplicação.
-- **Última mudança relevante:** direção grafite e minimalista da imagem conceitual aplicada ao mockup interativo; galeria reduzida a prévia, nome, estado e pendências. Criação e arraste de tarefas e abertura atual preservados.
+- **Última mudança relevante:** adicionada prévia resumida das tarefas abertas na contagem de pendências da galeria, por mouse/foco/toque, sem abrir o quadro; mantém estilo clean e arraste.
 - **Próxima tarefa recomendada:** validar o mockup revisado e definir campos, cadastro manual e critério de atraso; então escolher stack e persistência.
