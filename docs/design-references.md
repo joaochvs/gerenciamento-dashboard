@@ -24,3 +24,11 @@ Skill consultada diretamente no repositório [heliocosta-dev/revenue-centric-des
 Aplicação: foco na galeria e confirmação de atualização, detalhes por contexto e preservação das funções existentes. A Central BI é ferramenta interna; recomendações de receita, checkout e monetização não foram adicionadas. O tema escuro usa superfícies verde-petróleo com destaque menta; a alternativa clara usa superfícies lavanda e destaque violeta. Tipografia, espaçamento, bordas e hierarquia compartilham os mesmos tokens. Preferência visual fica em central-bi-theme, separada dos dados da aplicação.
 
 Licença da referência: [LICENSE](https://github.com/heliocosta-dev/revenue-centric-design/blob/main/LICENSE). Material source-available com atribuição obrigatória e exclusão de uso em apostas/cassino/jogos de azar. Não foram copiados ativos ou módulos do repositório para o frontend.
+
+## Reformulação estrutural azul e branca
+
+Após instalar a skill em C:/Users/jp/.codex/skills/revenue-centric-design, foram relidos seus princípios de hierarquia de atenção e redução de ruído. O usuário pediu mudança de composição, não apenas de cores, com direção azul/branca inspirada na segunda imagem.
+
+Aplicação: navegação lateral de biblioteca com seleções funcionais (todos, pendências, em construção), cabeçalho compacto, área de trabalho clara, cartões brancos com prévia azul, ações contextuais e abas horizontais no detalhe. Cadastro, arraste, tooltip, histórico e dados existentes permanecem. A alternativa escura usa azul, e a nova preferência visual fica em central-bi-theme-v2; a antiga preferência de paleta não determina o padrão desta revisão.
+
+Mecanismo utilizado: hierarquia de atenção para evidenciar o catálogo e a atualização, mantendo documentação e regras no contexto do dashboard, conforme [Richard — attention hierarchy](https://x.com/richardrx/status/2039399756452057159). A avaliação visual continua com o usuário, sem alegação de ganho de conversão ou receita para esta ferramenta interna.
