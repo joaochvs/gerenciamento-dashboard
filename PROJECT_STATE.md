@@ -9,5 +9,5 @@ Atualizado em: 2026-10-17.
 - **Problemas conhecidos:** sem CI, build, lint, testes ou deploy. Compatibilidade executável com Vercel não verificável ainda.
 - **Arquitetura atual:** repositório documental; frontend, backend, banco e integrações ausentes.
 - **Dependências importantes:** Git para versionamento; contas/acessos GitHub, Codex Cloud e Vercel para o fluxo externo. Nenhuma dependência de aplicação.
-- **Última mudança relevante:** repositório central definido como https://github.com/joaochvs/gerenciamento-dashboard.git; base documental preparada para publicação inicial em `main`. Confirmar sincronização com `git status -sb` e `git ls-remote origin refs/heads/main`.
+- **Última mudança relevante:** base documental publicada em https://github.com/joaochvs/gerenciamento-dashboard.git na branch `main` (commit inicial `5179bac`); origin configurado e upstream origin/main estabelecido.
 - **Próxima tarefa recomendada:** conectar o ambiente Codex Cloud ao repositório; definir escopo do dashboard e stack antes de criar a aplicação e os comandos de validação/deploy.

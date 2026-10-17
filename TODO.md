@@ -2,11 +2,10 @@
 
 ## Em andamento
 
-- [ ] Publicar a base documental no GitHub e conectar os ambientes.
+- [ ] Conectar os ambientes ao repositório GitHub publicado.
 
 ## Próximas tarefas
 
-- [ ] Confirmar publicação inicial e sincronização da branch main no repositório definido.
 - [ ] Clonar em diretórios independentes nos dois PCs, preferencialmente fora de pastas sincronizadas pelo OneDrive.
 - [ ] Definir objetivo de produto, usuários, indicadores, dados e regras de negócio do dashboard.
 - [ ] Escolher stack compatível com Vercel e registrar decisão.
@@ -29,6 +28,7 @@
 
 ## Concluído recentemente
 
+- [x] Publicar a base documental em main e configurar acompanhamento de origin/main (commit inicial 5179bac).
 - [x] Definir joaochvs/gerenciamento-dashboard como repositório central; remoto confirmado vazio antes da primeira publicação.
 - [x] Inspecionar diretório inicial e confirmar ausência de código e stack.
 - [x] Inicializar Git local na branch main.
