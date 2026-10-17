@@ -4,7 +4,7 @@ Base de documentação para desenvolver um dashboard entre PC de casa, PC do tra
 
 ## Estado e objetivo
 
-A pasta estava vazia na inspeção de 17/10/2026. Esta entrega estabelece contexto e fluxo de trabalho; ainda não existe aplicação. O domínio do dashboard, usuários e regras de negócio precisam ser definidos antes da implementação.
+A pasta estava vazia na inspeção de 17/10/2026. O produto organizará dashboards Power BI por projeto para a equipe BI e solicitantes, incluindo demandas, regras de negócio, histórico de mudanças e atualização dos dados. Ainda não existe aplicação. Consulte o [escopo inicial](docs/product-brief.md) para requisitos confirmados e propostas a validar.
 
 Leia [PROJECT_STATE.md](PROJECT_STATE.md), [TODO.md](TODO.md) e [AGENTS.md](AGENTS.md) ao retomar o trabalho. Arquitetura: [docs/architecture.md](docs/architecture.md). Decisões: [docs/decisions.md](docs/decisions.md). Operação entre ambientes: [docs/workflow.md](docs/workflow.md).
 
@@ -37,6 +37,7 @@ Não execute `npm install`, `npm run build` ou comandos semelhantes enquanto nã
 └── docs/
     ├── architecture.md
     ├── decisions.md
+    ├── product-brief.md
     └── workflow.md
 ```
 

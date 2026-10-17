@@ -2,12 +2,12 @@
 
 Atualizado em: 2026-10-17.
 
-- **Objetivo atual:** estabelecer continuidade entre dois PCs e Codex Cloud pelo celular, com GitHub central e deploy futuro no Vercel.
-- **Estágio atual:** preparação inicial; pasta originalmente vazia, sem aplicação ou stack definida.
+- **Objetivo atual:** organizar dashboards Power BI por projeto, demandas, regras, mudanças e atualização dos dados para equipe BI e solicitantes.
+- **Estágio atual:** descoberta de produto e mockup exploratório na conversa; sem aplicação ou stack definida. Escopo em docs/product-brief.md.
 - **Funcionalidades existentes:** nenhuma de produto; documentação e regras de colaboração criadas.
-- **Funcionalidades em desenvolvimento:** nenhuma implementação iniciada.
+- **Funcionalidades em desenvolvimento:** validação do catálogo, detalhe, demandas e registros separados de alteração e carga de dados; simulações no mockup, sem persistência real.
 - **Problemas conhecidos:** sem CI, build, lint, testes ou deploy. Compatibilidade executável com Vercel não verificável ainda.
 - **Arquitetura atual:** repositório documental; frontend, backend, banco e integrações ausentes.
 - **Dependências importantes:** Git para versionamento; contas/acessos GitHub, Codex Cloud e Vercel para o fluxo externo. Nenhuma dependência de aplicação.
-- **Última mudança relevante:** base documental publicada em https://github.com/joaochvs/gerenciamento-dashboard.git na branch `main` (commit inicial `5179bac`); origin configurado e upstream origin/main estabelecido.
-- **Próxima tarefa recomendada:** conectar o ambiente Codex Cloud ao repositório; definir escopo do dashboard e stack antes de criar a aplicação e os comandos de validação/deploy.
+- **Última mudança relevante:** requisitos iniciais confirmados (Power BI, BI + solicitantes, mudanças e cargas) e escopo documentado; GitHub central permanece joaochvs/gerenciamento-dashboard.
+- **Próxima tarefa recomendada:** validar mockup, permissões e requisitos corporativos; escolher stack após esclarecer esses pontos.
