@@ -1,0 +1,59 @@
+# Ambientes e segredos; somente o exemplo vazio é versionado
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+.secrets/
+secrets/
+.aws/
+
+# Dependências e ambientes virtuais
+node_modules/
+.pnp.*
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Build, cache e cobertura
+dist/
+build/
+out/
+.next/
+.nuxt/
+.output/
+.svelte-kit/
+.astro/
+.cache/
+.turbo/
+.parcel-cache/
+.vite/
+.npm/
+.pnpm-store/
+.yarn/cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+coverage/
+.nyc_output/
+*.tsbuildinfo
+
+# Estado de ferramentas e deploy local
+.vercel/
+.netlify/
+.codex/
+.idea/
+.vscode/
+
+# Arquivos locais e sistema operacional
+*.log
+*.tmp
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.local
