@@ -18,6 +18,8 @@ HTML carrega app.js → importa model.js → lê localStorage → valida dados o
 
 Dashboard agrupa tarefas e histórico. Tarefas em etapas 0 e 1 são pendências; etapa 2 é concluída. Estado da carga e ciclo de vida do dashboard são independentes das tarefas. Carga e alteração no relatório têm registros separados. Histórico de regras registra a alteração, sem versionamento integral do texto nesta fase.
 
+`recordRefresh` registra uma confirmação manual de carga: timestamp ISO em lastRefresh e history, refreshState em dia, sem modificar tarefas. A interface usa o mesmo fluxo de cópia/validação/persistência para a ação rápida da galeria e do detalhe.
+
 ## Persistência e integrações
 
 localStorage na chave central-bi-demo-v1 contém versão e dashboards. Dados são por navegador e origem, sem sincronização com GitHub. Exportação JSON permite cópia e transporte manual; importação valida formato e pede confirmação para substituir. Falha de quota/storage é informada sem aplicar alteração. Capturas fazem parte do JSON. Nenhum segredo, autenticação, chamada Power BI ou serviço de anexos.

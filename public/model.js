@@ -18,6 +18,13 @@ export function seed() {
   ] };
 }
 export const pending = d => d.tasks.filter(t => t.stage !== 2);
+export function recordRefresh(d, at = new Date().toISOString()) {
+  if (!d || Number.isNaN(Date.parse(at))) return false;
+  d.lastRefresh = at;
+  d.refreshState = 'Em dia';
+  d.history.push({ type: 'Atualização dos dados', text: 'Atualização concluída, confirmada manualmente.', at });
+  return true;
+}
 export function health(d) {
   if (d.status !== 'Em produção') return { text: d.status, tone: 'neutral' };
   if (d.refreshState === 'Atrasada' || d.refreshState === 'Falhou') return { text: d.refreshState === 'Atrasada' ? 'Atualização atrasada' : 'Falha na carga', tone: 'warning' };

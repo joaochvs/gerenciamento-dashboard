@@ -32,6 +32,8 @@
 
 ## Concluído recentemente
 
+- [x] Adicionar confirmação rápida de atualização dos dados com data/hora, estado em dia e histórico preservado.
+- [x] Pesquisar referências de aplicações e revisar paleta, hierarquia e prévias da galeria.
 - [x] Implementar frontend de teste com dados demonstrativos, localStorage, cadastros/edição, captura, arraste e exportação/importação.
 - [x] Adicionar resumo das tarefas abertas ao consultar a contagem de pendências no cartão da galeria.
 - [x] Aplicar direção visual clean/grafite ao mockup interativo, reduzindo informação na galeria e mantendo detalhes acessíveis dentro do dashboard.

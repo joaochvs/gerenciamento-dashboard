@@ -35,6 +35,7 @@ Verificação manual: cadastrar/editar dashboard e tarefa, enviar captura, arras
 - Capturas PNG/JPEG/WebP de até 500 KB, guardadas no navegador.
 - Cadastro/edição de tarefas com título, descrição, responsável e prazo; movimentação entre colunas por mouse, toque e teclado.
 - Regras editáveis e histórico manual separado de cargas e alterações no relatório.
+- Ação “Marcar como atualizado” na galeria e no dashboard: grava data/hora atual, marca a carga em dia e acrescenta um registro no histórico, sem concluir tarefas ou executar carga no Power BI.
 - Exportação/importação de JSON em “Dados de teste”; importação substitui os registros locais após confirmação.
 
 ## Dados e limitações

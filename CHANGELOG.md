@@ -4,6 +4,7 @@ Registrar somente mudanças relevantes de produto, arquitetura e operação. Peq
 
 ## 2026-10-17
 
+- Adicionada ação rápida para registrar atualização dos dados com data/hora e histórico; refinados cores, cartões e prévias com referências de interface.
 - Implementada primeira aplicação estática de teste com galeria, cadastros/edição, capturas, tarefas arrastáveis, regras, histórico e exportação/importação; persistência local no navegador. Adicionados build, testes, CI e configuração Vercel.
 - Definida direção visual grafite e minimalista para a Central BI, com informações progressivas e preservação das interações do mockup.
 - Revisado escopo para galeria visual de dashboards e quadro interno Ajustes/Iniciado/Feito, conforme referências do usuário; portal de solicitantes adiado.

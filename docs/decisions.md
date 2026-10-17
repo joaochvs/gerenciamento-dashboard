@@ -40,6 +40,14 @@
 - **Alternativas consideradas:** framework com backend desde o início; protótipo apenas na conversa; dados somente em memória.
 - **Impacto:** aplicação testável no navegador, sem sincronização de registros entre PCs; GitHub centraliza somente código/contexto. Estado de atraso fica manual até definir regras. Anexos gerais e integração Power BI ficam futuros. Capturas limitadas a 500 KB por imagem para reduzir consumo de localStorage.
 
+## 006 — Confirmar atualização manual em um clique
+
+- **Data:** 2026-10-17
+- **Decisão:** ação “Marcar como atualizado” registra o horário atual em ISO, marca a carga como em dia e acrescenta evento de Atualização dos dados, disponível no cartão e no detalhe.
+- **Motivo:** usuário quer confirmar uma atualização já realizada e manter o registro sem preencher um formulário a cada vez.
+- **Alternativas consideradas:** continuar usando somente o formulário de histórico; executar carga via API Power BI.
+- **Impacto:** confirmação manual não executa atualização externa, não conclui tarefas e não altera o ciclo de vida do dashboard. Registros anteriores são preservados; cada confirmação bem-sucedida adiciona um evento. Persistência continua local por navegador e falhas de gravação não aplicam a alteração.
+
 ## Modelo para novas decisões
 
 - **Data:** AAAA-MM-DD
