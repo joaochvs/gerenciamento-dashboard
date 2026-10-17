@@ -2,12 +2,12 @@
 
 Atualizado em: 2026-10-17.
 
-- **Objetivo atual:** estabelecer continuidade entre dois PCs e Codex Cloud pelo celular, com GitHub central e deploy futuro no Vercel.
-- **Estágio atual:** preparação inicial; pasta originalmente vazia, sem aplicação ou stack definida.
-- **Funcionalidades existentes:** nenhuma de produto; documentação e regras de colaboração criadas.
-- **Funcionalidades em desenvolvimento:** nenhuma implementação iniciada.
-- **Problemas conhecidos:** sem CI, build, lint, testes ou deploy. Compatibilidade executável com Vercel não verificável ainda.
-- **Arquitetura atual:** repositório documental; frontend, backend, banco e integrações ausentes.
-- **Dependências importantes:** Git para versionamento; contas/acessos GitHub, Codex Cloud e Vercel para o fluxo externo. Nenhuma dependência de aplicação.
-- **Última mudança relevante:** base documental publicada em https://github.com/joaochvs/gerenciamento-dashboard.git na branch `main` (commit inicial `5179bac`); origin configurado e upstream origin/main estabelecido.
-- **Próxima tarefa recomendada:** conectar o ambiente Codex Cloud ao repositório; definir escopo do dashboard e stack antes de criar a aplicação e os comandos de validação/deploy.
+- **Objetivo atual:** Central BI interna para organizar dashboards Power BI, cargas, mudanças, regras e tarefas.
+- **Estágio atual:** frontend de teste implementado em HTML/CSS/JavaScript, com dados fictícios e localStorage.
+- **Funcionalidades existentes:** galeria e resumo de pendências; cadastro/edição de dashboard e captura; criação/edição/arraste de tarefas; regras; histórico manual; exportar/importar JSON.
+- **Em desenvolvimento:** validação prática pelo usuário e refinamentos de usabilidade.
+- **Problemas conhecidos:** sem banco/login/sincronização/integração Power BI; atraso manual; anexos gerais indisponíveis. Dados dependem do navegador/origem.
+- **Arquitetura atual:** public/ estático → localStorage; Node 24 para servidor/build/testes, saída dist/ para Vercel.
+- **Dependências importantes:** nenhuma biblioteca externa de aplicação; Node 24/npm 11.18.0 para ferramentas.
+- **Última mudança relevante:** criadas duas propostas Figma editáveis (Atlas e Focus), cada uma com galeria e tarefas, sem alteração do frontend. Links em docs/figma-proposals.md e IDs em docs/figma-state.json.
+- **Próxima tarefa recomendada:** comparar as propostas Figma e escolher uma direção antes de continuar a reformulação do frontend. Deploy Vercel ainda depende da integração da conta.

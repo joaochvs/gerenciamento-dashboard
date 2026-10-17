@@ -4,6 +4,14 @@ Registrar somente mudanças relevantes de produto, arquitetura e operação. Peq
 
 ## 2026-10-17
 
+- Criadas propostas visuais Atlas e Focus no Figma, com galeria e tarefas editáveis; aguardando escolha do usuário antes de aplicar ao frontend.
+- Reformulada composição azul e branca com navegação lateral, filtros da biblioteca e abas no dashboard, usando a skill Revenue-Centric Design instalada e as referências do usuário.
+- Revisada direção visual com referências enviadas pelo usuário e princípios de Revenue-Centric Design: tema verde-petróleo, alternativa clara lavanda e preferência visual persistida.
+- Adicionada ação rápida para registrar atualização dos dados com data/hora e histórico; refinados cores, cartões e prévias com referências de interface.
+- Implementada primeira aplicação estática de teste com galeria, cadastros/edição, capturas, tarefas arrastáveis, regras, histórico e exportação/importação; persistência local no navegador. Adicionados build, testes, CI e configuração Vercel.
+- Definida direção visual grafite e minimalista para a Central BI, com informações progressivas e preservação das interações do mockup.
+- Revisado escopo para galeria visual de dashboards e quadro interno Ajustes/Iniciado/Feito, conforme referências do usuário; portal de solicitantes adiado.
+- Definido escopo inicial de gestão de dashboards Power BI para BI e solicitantes; mockup exploratório e propostas de fluxos registrados em docs/product-brief.md.
 - Preparada base documental para colaboração entre dois PCs e Codex Cloud, com GitHub como fonte central.
 - Registradas regras permanentes, estado inicial, tarefas, decisões e preparação de deploy futuro no Vercel.
 - Adicionadas políticas de arquivos locais/segredos e normalização de finais de linha.

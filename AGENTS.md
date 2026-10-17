@@ -7,7 +7,7 @@
 - Sempre manter responsividade; ao alterar interfaces, conferir telas pequenas e grandes e acessibilidade básica.
 - Preferir mudanças pequenas, claras e fáceis de revisar. Não refatorar partes não relacionadas sem necessidade.
 - Sempre validar build antes de finalizar quando houver comando disponível. Verificar lint e testes quando disponíveis. Informar comandos, resultados e limitações; não declarar sucesso de verificações ausentes ou não executadas.
-- Atualmente não existe aplicação: build, lint e testes não estão disponíveis. Ao criar a aplicação, documentar comandos reais no README, validar instalação limpa e build e configurar CI correspondente.
+- A aplicação de teste é estática (HTML/CSS/JS). Executar `npm run lint`, `npm test` e `npm run build` antes de finalizar alterações de código; verificar fluxos afetados no navegador. Lint atual verifica sintaxe. Persistência local não substitui banco central.
 - Nunca adicionar segredos ao repositório, logs ou documentação. Nunca versionar `.env` ou variantes reais. `.env.example` deve conter apenas nomes e valores vazios. Se um segredo for exposto, removê-lo não basta: revogar/rotacionar a credencial.
 - Atualizar PROJECT_STATE.md após mudanças relevantes, mantendo-o curto e factual. Atualizar TODO.md ao criar ou concluir tarefas. Registrar decisões arquiteturais importantes em docs/decisions.md e mudanças relevantes em CHANGELOG.md.
 - Ao mudar arquitetura, execução, ambiente ou deploy, atualizar também README.md e docs/architecture.md.

@@ -1,70 +1,89 @@
-# Gerenciamento Dashboard
+# Central BI
 
-Base de documentação para desenvolver um dashboard entre PC de casa, PC do trabalho e Codex Cloud pelo celular. GitHub é a fonte central da verdade; cada ambiente é uma cópia substituível.
+Aplicação de teste para organizar dashboards Power BI por projeto: galeria visual, pendências, quadro Ajustes → Iniciado → Feito, regras e histórico. Visual grafite, responsivo e preenchimento interno. Repositório central: [joaochvs/gerenciamento-dashboard](https://github.com/joaochvs/gerenciamento-dashboard).
 
-## Estado e objetivo
+Interface azul e branca com biblioteca, navegação lateral, filtros por pendências/construção e abas no detalhe. Tema claro padrão e alternativa escura no cabeçalho. Referências e atribuição da skill de design em [docs/design-references.md](docs/design-references.md). A nova preferência visual é salva em central-bi-theme-v2, separadamente dos registros; os dados existentes não são migrados nem apagados.
 
-A pasta estava vazia na inspeção de 17/10/2026. Esta entrega estabelece contexto e fluxo de trabalho; ainda não existe aplicação. O domínio do dashboard, usuários e regras de negócio precisam ser definidos antes da implementação.
+Leia [AGENTS.md](AGENTS.md), [PROJECT_STATE.md](PROJECT_STATE.md) e [TODO.md](TODO.md) antes de continuar. Escopo em [docs/product-brief.md](docs/product-brief.md), arquitetura em [docs/architecture.md](docs/architecture.md), decisões em [docs/decisions.md](docs/decisions.md) e fluxo entre ambientes em [docs/workflow.md](docs/workflow.md).
 
-Leia [PROJECT_STATE.md](PROJECT_STATE.md), [TODO.md](TODO.md) e [AGENTS.md](AGENTS.md) ao retomar o trabalho. Arquitetura: [docs/architecture.md](docs/architecture.md). Decisões: [docs/decisions.md](docs/decisions.md). Operação entre ambientes: [docs/workflow.md](docs/workflow.md).
+## Stack e instalação
 
-## Stack e execução
+HTML, CSS e JavaScript com módulos nativos. Node.js 24 e npm 11.18.0 para ferramentas; sem dependências externas de aplicação. Use a versão indicada em `.nvmrc` e o lockfile versionado.
 
-Stack atual: Markdown e Git. Framework, linguagem da aplicação, banco e integrações ainda não foram escolhidos. Nenhuma dependência de aplicação está instalada ou declarada.
-
-| Operação | Situação atual |
-| --- | --- |
-| Instalar dependências | Não se aplica; nenhum manifesto ou lockfile |
-| Rodar localmente | Não disponível; não há aplicação |
-| Build | Não disponível; nenhum comando definido |
-| Testes e lint | Não disponíveis; nenhuma suíte ou ferramenta definida |
-| Deploy | Pendente da primeira aplicação e da conexão ao GitHub |
-
-Não execute `npm install`, `npm run build` ou comandos semelhantes enquanto não existir manifesto com os scripts correspondentes. Ao escolher a stack, registre a decisão, fixe versões de runtime/gerenciador, versione o lockfile e substitua esta tabela pelos comandos efetivamente validados. Configure então CI para build, lint e testes disponíveis em pull requests.
-
-## Estrutura atual
-
-```text
-.
-├── .env.example
-├── .gitattributes
-├── .gitignore
-├── AGENTS.md
-├── CHANGELOG.md
-├── PROJECT_STATE.md
-├── README.md
-├── TODO.md
-└── docs/
-    ├── architecture.md
-    ├── decisions.md
-    └── workflow.md
+```sh
+npm ci
+npm run dev
 ```
 
-Pastas de código serão criadas com a stack escolhida. Não existem frontend, backend ou banco nesta etapa.
+Abra http://localhost:4173. O servidor usa loopback; o endereço não é acessível pelo celular em outro dispositivo. Para isso, use um Preview do Vercel quando a integração estiver configurada. Evite abrir index.html diretamente por file://; módulos e armazenamento devem ser usados com HTTP.
 
-## Variáveis de ambiente
+## Build, testes e verificação
 
-Nenhuma variável é necessária atualmente; `.env.example` está intencionalmente vazio. Quando surgirem variáveis, adicione somente nomes com valores vazios (`NOME=`), explique sua finalidade aqui e configure os valores em cada ambiente. Para criar uma cópia local, use `Copy-Item .env.example .env` no PowerShell ou `cp .env.example .env` no Linux. Não versione `.env`, tokens ou credenciais. Variáveis expostas ao navegador nunca devem conter segredos. Configure Preview e Production separadamente no Vercel.
+```sh
+npm run lint
+npm test
+npm run build
+npm run preview
+```
 
-## GitHub e continuidade
+`lint` verifica sintaxe JavaScript, não é um analisador completo de estilo. Testes nativos do Node cobrem modelo, conclusão/reabertura e validação de importação. Build copia `public/` para `dist/`. Preview serve esse resultado em localhost:4173; encerre o servidor anterior antes de iniciar outro na mesma porta. `PORT` pode mudar a porta do servidor local. CI executa instalação, sintaxe, testes e build no GitHub Actions.
 
-Repositório central definido pelo usuário: [joaochvs/gerenciamento-dashboard](https://github.com/joaochvs/gerenciamento-dashboard). Branch principal: `main`. Consulte [docs/workflow.md](docs/workflow.md) para publicar, clonar nos PCs e conectar o Codex Cloud.
+Verificação manual: cadastrar/editar dashboard e tarefa, enviar captura, arrastar com mouse e alça no celular, usar setas na alça pelo teclado, consultar resumo de pendências, registrar carga/mudança, recarregar a página e exportar/importar JSON. Conferir telas pequenas e grandes.
 
-Antes de trabalhar: sincronize, leia o contexto e use uma branch por tarefa. Antes de trocar de dispositivo: valide, atualize estado/tarefas/decisões e faça commit e push. Trabalho apenas no chat ou sem push não está disponível no outro ambiente. Integre via pull request; evite alterações simultâneas na mesma branch.
+## O que funciona nesta versão
 
-## Vercel
+- Galeria com quatro dashboards fictícios e consulta de pendências por mouse, foco ou toque.
+- Cadastro/edição de dashboards: nome, projeto, responsável, link HTTPS, captura e frequência; situação e carga informadas manualmente.
+- Capturas PNG/JPEG/WebP de até 500 KB, guardadas no navegador.
+- Cadastro/edição de tarefas com título, descrição, responsável e prazo; movimentação entre colunas por mouse, toque e teclado.
+- Regras editáveis e histórico manual separado de cargas e alterações no relatório.
+- Ação “Marcar como atualizado” na galeria e no dashboard: grava data/hora atual, marca a carga em dia e acrescenta um registro no histórico, sem concluir tarefas ou executar carga no Power BI.
+- Exportação/importação de JSON em “Dados de teste”; importação substitui os registros locais após confirmação.
 
-Destino de hospedagem escolhido: Vercel, com GitHub conectado, previews de branches/PRs e produção em `main`. Ainda não é possível confirmar compatibilidade executável, comando de build ou diretório de saída: não existe código para implantá-lo. Não foi criado `vercel.json` com valores presumidos.
+## Dados e limitações
 
-Depois da primeira aplicação, preencha e teste:
+Dados demonstrativos e alterações ficam em localStorage deste navegador e desta origem (endereço + porta). Não há banco, login, sincronização entre computadores ou integração Power BI. GitHub sincroniza código e documentação, **não os registros da aplicação**. Use exportação/importação para transportar dados de teste. Limpar dados do site remove o armazenamento. Não use informações confidenciais nessa demonstração.
 
-| Configuração | Valor a definir |
+Se o navegador impedir ou esgotar o armazenamento, a aplicação informa a falha e não aplica a alteração. A galeria usa ilustrações enquanto não houver captura cadastrada. Cargas atrasadas são estado manual; não existe cálculo automático de frequência/tolerância. Arquivos é uma área informativa, sem upload de anexos gerais. A versão real precisará de banco central, acesso e armazenamento de arquivos.
+
+## Estrutura
+
+```text
+public/                  HTML, CSS, aplicação e modelo de dados
+scripts/build.mjs        Gera dist/
+scripts/serve.mjs        Servidor HTTP local
+tests/model.test.js     Testes do modelo
+.github/workflows/ci.yml Validação no GitHub
+docs/                   Arquitetura, decisões, escopo e fluxo
+AGENTS.md               Regras permanentes
+PROJECT_STATE.md        Estado curto atual
+TODO.md                 Tarefas
+CHANGELOG.md            Mudanças relevantes
+package.json            Comandos e runtime
+package-lock.json       Instalação reproduzível
+vercel.json             Build e saída estática
+```
+
+## Ambiente
+
+Nenhuma variável de aplicação é necessária; `.env.example` permanece vazio. Nunca versione `.env` ou segredos. O servidor local aceita `PORT` pelo ambiente, sem exigir arquivo .env. Não adicione credenciais em JavaScript entregue ao navegador.
+
+## Deploy Vercel
+
+Aplicação estática compatível com hospedagem Vercel. Configuração versionada em `vercel.json`:
+
+| Campo | Valor |
 | --- | --- |
-| Root Directory | Pasta que contiver a aplicação; `.` se estiver na raiz |
-| Framework Preset | Framework realmente escolhido |
-| Install Command | Instalação reproduzível pelo lockfile |
-| Build Command | Script real de build validado |
-| Output Directory | Saída exigida pelo framework; manter detecção quando suportada |
-| Runtime e ambiente | Versões compatíveis, variáveis de Preview/Production |
+| Root Directory | Raiz do repositório |
+| Framework Preset | Other |
+| Install Command | npm ci |
+| Build Command | npm run build |
+| Output Directory | dist |
+| Node.js | 24.x |
+| Variáveis | Nenhuma |
 
-Para SPA, avaliar fallback de rotas; para backend, verificar compatibilidade com Functions, persistência externa e limites da plataforma. Não publicar esta raiz documental como site estático. Instruções de conexão e validação em [docs/workflow.md](docs/workflow.md).
+Conecte GitHub, importe o repositório, confira esses campos e use main para produção. Branches/PRs devem gerar Preview após configurar a integração. Somente `dist/` é publicado. Não há rotas de backend ou serviços para configurar. Deploy externo ainda não foi realizado nesta entrega; build local é a validação disponível. Configuração do serviço deve ser conferida ao importar, conforme [documentação Vercel](https://vercel.com/docs/builds/configure-a-build).
+
+## Colaboração
+
+GitHub é a fonte central. Sincronize antes de iniciar, trabalhe em branch, valide e atualize contexto antes de commit/push. Evite editar a mesma branch simultaneamente em dois dispositivos. Integre via PR. O guia [docs/workflow.md](docs/workflow.md) detalha PCs, Codex Cloud e Vercel.

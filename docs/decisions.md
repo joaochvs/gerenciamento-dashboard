@@ -24,6 +24,30 @@
 - **Alternativas consideradas:** gerar aplicação padrão imediatamente; configurar deploy estático da raiz documental.
 - **Impacto:** nenhuma aplicação é publicada nesta etapa; primeira implementação deverá validar compatibilidade, build, diretório de saída e CI. Não há vercel.json por enquanto.
 
+## 004 — Galeria visual e tarefas internas no primeiro ciclo
+
+- **Data:** 2026-10-17
+- **Decisão:** organizar dashboards em cartões com prévia, informações de atualização e pendências; abrir prévia maior, documentação lateral e quadro Ajustes/Iniciado/Feito. Cadastro e tarefas preenchidos internamente.
+- **Motivo:** o usuário rejeitou a apresentação em lista e forneceu desenhos com a composição desejada. Pediu adiar recebimento de demandas externas.
+- **Alternativas consideradas:** catálogo em lista com demandas globais e portal de solicitantes desde o início; incorporação automática do Power BI.
+- **Impacto:** validar a nova composição antes de implementar stack; captura manual é proposta inicial, sem integração automática. Regras de atraso por frequência permanecem a definir. Carga de dados e mudança do relatório continuam separadas.
+
+## 005 — Frontend de teste estático com armazenamento local
+
+- **Data:** 2026-10-17
+- **Decisão:** implementar HTML/CSS/JavaScript sem framework ou dependências externas, localStorage e dados fictícios. Node 24/npm 11.18.0 para ferramentas; build em dist, configuração Vercel e CI. Exportar/importar JSON para cópia manual.
+- **Motivo:** usuário aprovou começar com teste, cadastro de dashboards/tarefas e adiar banco e login.
+- **Alternativas consideradas:** framework com backend desde o início; protótipo apenas na conversa; dados somente em memória.
+- **Impacto:** aplicação testável no navegador, sem sincronização de registros entre PCs; GitHub centraliza somente código/contexto. Estado de atraso fica manual até definir regras. Anexos gerais e integração Power BI ficam futuros. Capturas limitadas a 500 KB por imagem para reduzir consumo de localStorage.
+
+## 006 — Confirmar atualização manual em um clique
+
+- **Data:** 2026-10-17
+- **Decisão:** ação “Marcar como atualizado” registra o horário atual em ISO, marca a carga como em dia e acrescenta evento de Atualização dos dados, disponível no cartão e no detalhe.
+- **Motivo:** usuário quer confirmar uma atualização já realizada e manter o registro sem preencher um formulário a cada vez.
+- **Alternativas consideradas:** continuar usando somente o formulário de histórico; executar carga via API Power BI.
+- **Impacto:** confirmação manual não executa atualização externa, não conclui tarefas e não altera o ciclo de vida do dashboard. Registros anteriores são preservados; cada confirmação bem-sucedida adiciona um evento. Persistência continua local por navegador e falhas de gravação não aplicam a alteração.
+
 ## Modelo para novas decisões
 
 - **Data:** AAAA-MM-DD
