@@ -45,6 +45,8 @@ Fora do primeiro ciclo: portal de solicitantes, recebimento externo de demandas,
 
 ## Mockup revisado
 
+Direção visual solicitada e aplicada ao protótipo interativo: fundo grafite, tipografia leve, bordas discretas e cores pontuais. A galeria mostra somente prévia, nome, estado e quantidade de pendências; datas, responsáveis, regras e arquivos continuam no interior do dashboard. Removidos legenda global, metadados repetidos e blocos explicativos extensos da tela principal. A abertura atual e o arraste de tarefas são preservados; a sobreposição da imagem conceitual não implica implementar pop-up.
+
 Galeria de três cartões ilustrativos, abertura por cartão, prévia ampliada, navegação lateral, criação e movimentação de tarefas e simulação de carga concluída. Sem servidor, integração, upload real, autenticação ou persistência garantida. Não define stack nem substitui aplicação. Mockup apresentado na conversa; decisões e escopo ficam versionados neste documento.
 
 ## Perguntas para a implementação
