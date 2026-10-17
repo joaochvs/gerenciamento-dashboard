@@ -1,49 +1,59 @@
 # Escopo inicial — Central BI
 
-Data: 2026-10-17. Documento de descoberta; propostas abaixo ainda precisam de validação.
+Atualizado em: 2026-10-17. Descoberta de produto; campos e regras detalhadas ainda estão em validação.
 
-## Necessidade confirmada
+## Direção confirmada
 
-Organizar os dashboards Power BI de vários projetos, cada um com suas próprias regras, mudanças e frequência de atualização. Público inicial: equipe BI e pessoas que solicitam dashboards. Registrar tanto alterações no relatório quanto atualização dos dados.
+Organizar dashboards Power BI de vários projetos, suas regras, atualizações e ajustes. Após avaliar o primeiro mockup, o usuário definiu uma galeria visual com cartões e um quadro de tarefas por dashboard. O primeiro ciclo será preenchido internamente pela própria equipe; recebimento de demandas externas e acesso de solicitantes ficam fora deste ciclo.
 
-## Estrutura proposta
+## Tela inicial: galeria
 
-- Projeto agrupa dashboards e contexto de negócio.
-- Dashboard possui objetivo, responsável BI, responsável de negócio, link Power BI, origem dos dados, frequência esperada, status e demandas relacionadas.
-- Demanda pode representar novo dashboard, correção, melhoria ou incidente de dados; possui solicitante, responsável, prioridade, prazo, critérios de aceite e histórico.
-- Alteração registra o que mudou no relatório, motivo, autor, data, demanda de origem e publicação/validação.
-- Execução de atualização dos dados registra horário, resultado, período de referência e motivo de falha. Registro manual no MVP proposto; automação Power BI não está implementada nem aprovada.
-- Regra de negócio documenta indicador, fórmula, filtros, exceções, origem, vigência e pessoa responsável pela aprovação. Mudanças devem preservar histórico.
+- Cartões aproximadamente quadrados com captura/prévia visual do dashboard.
+- Nome, projeto, última atualização dos dados e última mudança no relatório.
+- Pendências visíveis no próprio cartão.
+- Sinais de cor acompanhados de texto: em dia, com pendências e atualização atrasada.
+- Ao clicar, abrir o espaço de trabalho do dashboard.
 
-## Distinções importantes a validar
+Prévias do mockup são ilustrativas. Na aplicação, a proposta inicial é cadastrar manualmente uma captura; captura automática e incorporação Power BI não estão definidas.
 
-Um dashboard pode estar em produção e possuir melhorias pendentes. “Entrega concluída” de uma demanda não significa dashboard arquivado. Falha na carga dos dados não significa mudança no relatório. Cada dashboard pode ter periodicidade diferente; atualização antiga só é atraso quando comparada à sua frequência esperada e tolerância.
+## Interior do dashboard
 
-Status propostos do dashboard: planejado, em construção, em validação, em produção, pausado e arquivado. Status propostos de demanda: a fazer, em andamento, bloqueada, em validação e concluída. São hipóteses de produto, não regras aprovadas.
+- Prévia maior na parte superior.
+- Menu lateral: tarefas, informações, regras de negócio/documentação, arquivos e histórico.
+- Quadro abaixo da prévia com colunas **Ajustes**, **Iniciado** e **Feito**, conforme desenho do usuário.
+- Criar tarefas manualmente e mover entre etapas; tarefas concluídas continuam visíveis.
+- Informações básicas: objetivo, projeto, responsável, link Power BI, frequência esperada e última carga.
+- Histórico separa mudanças no relatório de atualização dos dados.
+- Documentação contém fórmulas, filtros, exceções e regras de negócio. Arquivos vinculados serão detalhados na implementação.
 
-## MVP proposto
+## Semântica proposta dos sinais
 
-1. Catálogo por projeto com detalhes e link do dashboard.
-2. Demandas de criação/ajuste com responsáveis e critérios de aceite.
-3. Histórico separado de mudanças e atualização dos dados.
-4. Regras de negócio vinculadas ao dashboard.
-5. Acesso da equipe BI e solicitantes, com matriz de permissões a definir antes do uso real.
+Dashboard em produção pode ter ajustes pendentes; concluir uma tarefa não arquiva o dashboard. Pendências são tarefas em Ajustes ou Iniciado. Carga atrasada deve ser calculada a partir da frequência esperada, prazo e tolerância configurados por dashboard, nunca somente da existência de tarefas. Esses parâmetros ainda precisam ser definidos.
 
-Depois: notificações, anexos/evidências, revisão periódica de regras e integração automática com Power BI. Integrações dependem de acesso corporativo, tenant, permissões e avaliação técnica futura.
+No mockup, o sinal principal prioriza atraso sobre pendências e mantém o número de pendências visível. Sem atraso nem pendências, exibe “Tudo em dia”. Cores não são a única forma de comunicar o estado. Prévia não comprova atualidade dos dados: captura e carga têm registros distintos.
 
-## Mockup exploratório
+## Primeiro ciclo proposto
 
-Apresentado na conversa com dados fictícios: catálogo de três dashboards, detalhe, regras, histórico, registro simulado de atualização e lista de demandas com conclusão simulada. Sem backend, autenticação, persistência real ou integração Power BI. O mockup da conversa não é a aplicação nem define a stack.
+1. Cadastro manual dos dashboards e de suas capturas.
+2. Galeria com informações básicas e alertas por cartão.
+3. Quadro manual de tarefas por dashboard.
+4. Registro manual de cargas e mudanças.
+5. Informações, documentação de negócio e referências de arquivos.
 
-## Perguntas abertas
+Fora do primeiro ciclo: portal de solicitantes, recebimento externo de demandas, fluxo de aprovação, captura automática de previews, sincronização com Power BI e notificações automáticas. O interesse anterior em BI + solicitantes permanece como possibilidade futura, sem bloquear a validação visual atual.
 
-- Solicitantes devem ver todos os projetos ou somente os autorizados?
-- Quem pode cadastrar dashboards, alterar regras e aprovar entregas?
-- Login corporativo Microsoft é obrigatório? Há autorização da empresa para armazenar metadados em serviço externo?
-- Projeto equivale a cliente, área interna ou iniciativa? Um dashboard pode pertencer a vários projetos?
-- O primeiro ciclo pode usar registro manual de cargas ou depende de integração automática?
-- Que volume de dashboards, projetos e usuários existe hoje?
+## Mockup revisado
+
+Galeria de três cartões ilustrativos, abertura por cartão, prévia ampliada, navegação lateral, criação e movimentação de tarefas e simulação de carga concluída. Sem servidor, integração, upload real, autenticação ou persistência garantida. Não define stack nem substitui aplicação. Mockup apresentado na conversa; decisões e escopo ficam versionados neste documento.
+
+## Perguntas para a implementação
+
+- Quantos dashboards/projetos serão cadastrados inicialmente?
+- Atraso será baseado em horário diário, frequência semanal ou prazo manual por dashboard?
+- Que campos devem ser obrigatórios nas tarefas: responsável, prazo, prioridade?
+- Um projeto representa área, cliente ou iniciativa? Um dashboard pertence a um ou vários projetos?
+- Onde poderão ser armazenados capturas, documentação e anexos conforme as condições da empresa?
 
 ## Próximo passo
 
-Validar o mockup e os fluxos, responder permissões e requisitos corporativos, então escolher stack, banco e autenticação compatíveis com o deploy pretendido.
+Validar a composição galeria → prévia e quadro; depois definir cadastro, campos e persistência. Permissões para solicitantes serão discutidas somente quando esse público entrar no escopo.

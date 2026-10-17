@@ -24,6 +24,14 @@
 - **Alternativas consideradas:** gerar aplicação padrão imediatamente; configurar deploy estático da raiz documental.
 - **Impacto:** nenhuma aplicação é publicada nesta etapa; primeira implementação deverá validar compatibilidade, build, diretório de saída e CI. Não há vercel.json por enquanto.
 
+## 004 — Galeria visual e tarefas internas no primeiro ciclo
+
+- **Data:** 2026-10-17
+- **Decisão:** organizar dashboards em cartões com prévia, informações de atualização e pendências; abrir prévia maior, documentação lateral e quadro Ajustes/Iniciado/Feito. Cadastro e tarefas preenchidos internamente.
+- **Motivo:** o usuário rejeitou a apresentação em lista e forneceu desenhos com a composição desejada. Pediu adiar recebimento de demandas externas.
+- **Alternativas consideradas:** catálogo em lista com demandas globais e portal de solicitantes desde o início; incorporação automática do Power BI.
+- **Impacto:** validar a nova composição antes de implementar stack; captura manual é proposta inicial, sem integração automática. Regras de atraso por frequência permanecem a definir. Carga de dados e mudança do relatório continuam separadas.
+
 ## Modelo para novas decisões
 
 - **Data:** AAAA-MM-DD

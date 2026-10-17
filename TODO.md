@@ -2,13 +2,14 @@
 
 ## Em andamento
 
-- [ ] Validar mockup e escopo em docs/product-brief.md; esclarecer acesso, aprovação e requisitos corporativos.
+- [ ] Validar mockup revisado: galeria de cartões, prévia maior e quadro Ajustes/Iniciado/Feito.
 - [ ] Conectar os ambientes ao repositório GitHub publicado.
 
 ## Próximas tarefas
 
 - [ ] Clonar em diretórios independentes nos dois PCs, preferencialmente fora de pastas sincronizadas pelo OneDrive.
-- [ ] Detalhar modelo de projetos, campos, regras, indicadores e permissões a partir do escopo confirmado.
+- [ ] Definir campos do cadastro manual de dashboards, captura e tarefas internas.
+- [ ] Definir frequência, prazo e tolerância para indicar atualização atrasada por dashboard.
 - [ ] Escolher stack compatível com Vercel e registrar decisão.
 - [ ] Criar aplicação com runtime fixado, lockfile e scripts reais de execução, build, lint e testes pertinentes.
 - [ ] Validar instalação limpa e build em Windows e no ambiente Linux do Cloud.
@@ -18,6 +19,7 @@
 
 ## Backlog
 
+- [ ] Avaliar portal de solicitantes e demandas externas somente em uma fase futura.
 - [ ] Definir autenticação, permissões, persistência e integrações conforme requisitos.
 - [ ] Definir testes de fluxos essenciais, responsividade e acessibilidade.
 - [ ] Definir domínio, observabilidade, backups e recuperação quando houver serviços/dados.
@@ -29,6 +31,7 @@
 
 ## Concluído recentemente
 
+- [x] Revisar proposta conforme desenhos do usuário: galeria com prévias e pendências no cartão, quadro por dashboard e preenchimento interno.
 - [x] Confirmar Power BI, público BI + solicitantes e controle separado de mudanças e atualização dos dados.
 - [x] Documentar escopo inicial e apresentar mockup exploratório com dados fictícios.
 - [x] Publicar a base documental em main e configurar acompanhamento de origin/main (commit inicial 5179bac).

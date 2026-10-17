@@ -4,7 +4,7 @@ Base de documentação para desenvolver um dashboard entre PC de casa, PC do tra
 
 ## Estado e objetivo
 
-A pasta estava vazia na inspeção de 17/10/2026. O produto organizará dashboards Power BI por projeto para a equipe BI e solicitantes, incluindo demandas, regras de negócio, histórico de mudanças e atualização dos dados. Ainda não existe aplicação. Consulte o [escopo inicial](docs/product-brief.md) para requisitos confirmados e propostas a validar.
+A pasta estava vazia na inspeção de 17/10/2026. O produto organizará dashboards Power BI por projeto em uma galeria de cartões com prévias, atualização e pendências. Cada cartão abre a prévia maior, documentação e um quadro manual de tarefas (Ajustes, Iniciado, Feito). O primeiro ciclo terá preenchimento interno; portal de solicitantes e demandas externas ficam para o futuro. Ainda não existe aplicação. Consulte o [escopo inicial](docs/product-brief.md) para requisitos confirmados e propostas a validar.
 
 Leia [PROJECT_STATE.md](PROJECT_STATE.md), [TODO.md](TODO.md) e [AGENTS.md](AGENTS.md) ao retomar o trabalho. Arquitetura: [docs/architecture.md](docs/architecture.md). Decisões: [docs/decisions.md](docs/decisions.md). Operação entre ambientes: [docs/workflow.md](docs/workflow.md).
 
