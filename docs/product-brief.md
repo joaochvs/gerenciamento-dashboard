@@ -60,4 +60,4 @@ Galeria de três cartões ilustrativos, abertura por cartão, prévia ampliada, 
 
 ## Próximo passo
 
-Validar a composição galeria → prévia e quadro; depois definir cadastro, campos e persistência. Permissões para solicitantes serão discutidas somente quando esse público entrar no escopo.
+Usuário aprovou começar a implementação de teste em HTML/CSS/JavaScript com dados demonstrativos e armazenamento no navegador. Cadastro de dashboard: nome, projeto, responsável, link Power BI, captura e frequência; tarefa: título, descrição, responsável e prazo. Frontend implementado em public/. Banco e login foram explicitamente adiados. Próximo passo: validar o uso real da demonstração e revisar regras de atraso e campos. Permissões para solicitantes serão discutidas quando esse público entrar no escopo.

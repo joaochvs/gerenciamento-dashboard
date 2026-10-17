@@ -2,12 +2,12 @@
 
 Atualizado em: 2026-10-17.
 
-- **Objetivo atual:** Central BI interna com galeria de dashboards Power BI, prévias, alertas de atualização e pendências; quadro de tarefas manual por dashboard.
-- **Estágio atual:** descoberta de produto e mockup exploratório na conversa; sem aplicação ou stack definida. Escopo em docs/product-brief.md.
-- **Funcionalidades existentes:** nenhuma de produto; documentação e regras de colaboração criadas.
-- **Funcionalidades em desenvolvimento:** mockup revisado: cartões visuais → prévia maior + menu lateral + quadro Ajustes/Iniciado/Feito; preenchimento interno e simulações sem persistência real.
-- **Problemas conhecidos:** sem CI, build, lint, testes ou deploy. Compatibilidade executável com Vercel não verificável ainda.
-- **Arquitetura atual:** repositório documental; frontend, backend, banco e integrações ausentes.
-- **Dependências importantes:** Git para versionamento; contas/acessos GitHub, Codex Cloud e Vercel para o fluxo externo. Nenhuma dependência de aplicação.
-- **Última mudança relevante:** adicionada prévia resumida das tarefas abertas na contagem de pendências da galeria, por mouse/foco/toque, sem abrir o quadro; mantém estilo clean e arraste.
-- **Próxima tarefa recomendada:** validar o mockup revisado e definir campos, cadastro manual e critério de atraso; então escolher stack e persistência.
+- **Objetivo atual:** Central BI interna para organizar dashboards Power BI, cargas, mudanças, regras e tarefas.
+- **Estágio atual:** frontend de teste implementado em HTML/CSS/JavaScript, com dados fictícios e localStorage.
+- **Funcionalidades existentes:** galeria e resumo de pendências; cadastro/edição de dashboard e captura; criação/edição/arraste de tarefas; regras; histórico manual; exportar/importar JSON.
+- **Em desenvolvimento:** validação prática pelo usuário e refinamentos de usabilidade.
+- **Problemas conhecidos:** sem banco/login/sincronização/integração Power BI; atraso manual; anexos gerais indisponíveis. Dados dependem do navegador/origem.
+- **Arquitetura atual:** public/ estático → localStorage; Node 24 para servidor/build/testes, saída dist/ para Vercel.
+- **Dependências importantes:** nenhuma biblioteca externa de aplicação; Node 24/npm 11.18.0 para ferramentas.
+- **Última mudança relevante:** primeira aplicação de teste criada; CI e configuração Vercel preparadas. Ver decisão 005.
+- **Próxima tarefa recomendada:** testar cadastros, quadro e histórico; revisar campos e atraso antes de planejar banco e login. Deploy Vercel ainda depende da integração da conta.

@@ -1,39 +1,31 @@
-# Arquitetura
+# Arquitetura atual
 
-## Visão geral atual
+## Visão geral
 
-Em 2026-10-17, o diretório estava vazio. A estrutura atual contém somente documentação e configuração de versionamento. Não há arquitetura de aplicação a preservar ou componentes executáveis. A arquitetura do produto deverá ser registrada aqui após definição do escopo e da stack.
+Frontend estático para teste, em HTML/CSS/JavaScript nativos. Sem backend ou banco externo. A decisão 005 registra a adoção desta fase com armazenamento local.
 
-## Componentes e dependências
+## Componentes e fluxo de dados
 
-| Componente | Responsabilidade / estado |
-| --- | --- |
-| README.md | Entrada, execução e deploy |
-| AGENTS.md | Regras permanentes para agentes |
-| PROJECT_STATE.md | Retrato curto e atual da continuidade |
-| TODO.md | Trabalho em andamento, próximo e bloqueado |
-| docs/decisions.md | Motivos e impactos das decisões |
-| CHANGELOG.md | Histórico de mudanças relevantes |
-| docs/workflow.md | Operação entre dispositivos e serviços |
-| Frontend / backend / banco | Não implementados |
-| Integrações de produto | Nenhuma |
+- `public/index.html`: shell, formulário modal, avisos e tooltip.
+- `public/styles.css`: visual grafite, galeria, formulários e responsividade.
+- `public/model.js`: dados fictícios, etapas, pendências, estado da carga, movimentação e validação do formato de importação.
+- `public/app.js`: renderização, navegação, formulários, imagens, arraste, consulta de pendências e persistência.
+- `scripts/serve.mjs`: HTTP local; não é servidor de produção.
+- `scripts/build.mjs`: copia arquivos de public/ para dist/.
+- `tests/model.test.js`: contratos do modelo, etapas e validação.
 
-README aponta para estado, tarefas e documentação técnica; estado aponta a próxima prioridade. Decisões justificam mudanças de arquitetura; changelog registra resultados relevantes. Não há dependências entre módulos de código porque eles ainda não existem.
+HTML carrega app.js → importa model.js → lê localStorage → valida dados ou usa demonstração → renderiza. Formulários criam uma cópia do estado, validam e tentam salvar; só aplicam a mudança após persistência bem-sucedida. Interface escapa texto do usuário antes de inserir HTML. Links aceitam somente HTTPS; capturas são data URLs PNG/JPEG/WebP limitadas.
 
-## Fluxo de colaboração e dados
+Dashboard agrupa tarefas e histórico. Tarefas em etapas 0 e 1 são pendências; etapa 2 é concluída. Estado da carga e ciclo de vida do dashboard são independentes das tarefas. Carga e alteração no relatório têm registros separados. Histórico de regras registra a alteração, sem versionamento integral do texto nesta fase.
 
-PC de casa / PC do trabalho / Codex Cloud → branch e commits → GitHub → pull request e revisão → main.
+## Persistência e integrações
 
-Após conexão e criação da aplicação: GitHub → Vercel Preview para branches/PRs; main → Vercel Production. Celular envia tarefas pelo Codex Cloud e valida o Preview. Não existe fluxo de dados de aplicação ou armazenamento implementado nesta etapa.
+localStorage na chave central-bi-demo-v1 contém versão e dashboards. Dados são por navegador e origem, sem sincronização com GitHub. Exportação JSON permite cópia e transporte manual; importação valida formato e pede confirmação para substituir. Falha de quota/storage é informada sem aplicar alteração. Capturas fazem parte do JSON. Nenhum segredo, autenticação, chamada Power BI ou serviço de anexos.
 
-## Deploy e limites
+## Deploy e operação
 
-Vercel é o destino pretendido. Framework, build e output estão pendentes; consultar README antes de configurar. Nenhum `vercel.json` é necessário nesta etapa documental. A primeira implementação deve comprovar instalação reproduzível, build, rotas e variáveis em Preview antes de produção. Serviços persistentes, se necessários, devem ser externos e documentados com seu fluxo de dados e responsabilidades.
+Node 24/npm 11.18.0 para instalação e ferramentas. CI: npm ci → lint de sintaxe → testes → build. Vercel: Other, raiz do repositório, npm run build e saída dist. Nenhuma variável obrigatória. Preview/Production terão armazenamentos distintos por origem; não representam sincronização de dados. Deploy remoto pendente da configuração da conta.
 
-## Pontos importantes
+## Evolução
 
-- GitHub centraliza código e contexto; cópias locais não são backups exclusivos.
-- Nenhuma dependência de caminhos pessoais, filesystem local persistente ou estado do chat.
-- Windows nos PCs e Linux no Cloud exigem atenção a maiúsculas/minúsculas e comandos portáveis.
-- Nunca transportar segredos por Git. Configurá-los separadamente em cada ambiente.
-- Introduzir pastas e serviços apenas quando a stack e os requisitos os justificarem.
+Banco, login, autorização e anexos serão definidos após validar o frontend. Trocar a persistência exigirá migração explícita; não tratar localStorage como banco de produção. Regras automáticas de atraso dependem de frequência, horário e tolerância ainda não definidos. A interface deve preservar o cadastro manual e a distinção entre cargas, tarefas e mudanças.

@@ -2,18 +2,19 @@
 
 ## Em andamento
 
-- [ ] Validar mockup revisado: galeria de cartões, prévia maior e quadro Ajustes/Iniciado/Feito.
+- [ ] Testar a primeira aplicação: cadastros, captura, tarefas, histórico e exportação/importação.
 - [ ] Conectar os ambientes ao repositório GitHub publicado.
 
 ## Próximas tarefas
 
 - [ ] Clonar em diretórios independentes nos dois PCs, preferencialmente fora de pastas sincronizadas pelo OneDrive.
-- [ ] Definir campos do cadastro manual de dashboards, captura e tarefas internas.
+- [x] Definir campos do cadastro manual de dashboards, captura e tarefas internas.
 - [ ] Definir frequência, prazo e tolerância para indicar atualização atrasada por dashboard.
-- [ ] Escolher stack compatível com Vercel e registrar decisão.
-- [ ] Criar aplicação com runtime fixado, lockfile e scripts reais de execução, build, lint e testes pertinentes.
+- [x] Escolher HTML/CSS/JS estático com localStorage para a fase de teste e registrar decisão.
+- [x] Criar aplicação com runtime fixado, lockfile e scripts de execução, build, sintaxe e testes.
 - [ ] Validar instalação limpa e build em Windows e no ambiente Linux do Cloud.
-- [ ] Configurar CI no GitHub e proteção de main conforme recursos da conta.
+- [x] Versionar CI no GitHub para sintaxe, testes e build.
+- [ ] Configurar proteção de main conforme recursos da conta e conferir execução remota do CI.
 - [ ] Criar/publicar ambiente Codex Cloud conectado ao repositório.
 - [ ] Importar aplicação no Vercel; validar build, saída, Preview e Production.
 
@@ -27,10 +28,11 @@
 ## Bloqueios
 
 - [ ] Integrações Codex Cloud e Vercel dependem de autorização e configuração nas contas.
-- [ ] Comando de build, saída Vercel e CI executável dependem da definição e criação da aplicação.
+- [ ] Deploy Vercel depende da conexão da conta ao GitHub; configuração de build já versionada.
 
 ## Concluído recentemente
 
+- [x] Implementar frontend de teste com dados demonstrativos, localStorage, cadastros/edição, captura, arraste e exportação/importação.
 - [x] Adicionar resumo das tarefas abertas ao consultar a contagem de pendências no cartão da galeria.
 - [x] Aplicar direção visual clean/grafite ao mockup interativo, reduzindo informação na galeria e mantendo detalhes acessíveis dentro do dashboard.
 - [x] Trocar seletor de etapa por arraste de cartões no mockup, preservando a abertura atual do quadro.

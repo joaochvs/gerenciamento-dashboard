@@ -1,0 +1,9 @@
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#131619"><title>Central BI</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+<header class="top"><a class="brand" href="#"><span class="brand-mark" aria-hidden="true">▥</span> Central BI</a><span class="demo">Ambiente de teste · dados neste navegador</span><details class="data-menu"><summary>Dados de teste</summary><div><button id="export-data">Exportar JSON</button><label class="file-button">Importar JSON<input type="file" id="import-data" accept="application/json,.json"></label></div></details></header>
+<main id="app"></main><p id="notice" role="status" aria-live="polite"></p>
+<dialog id="editor"><form id="edit-form"><div class="dialog-head"><h2 id="editor-title"></h2><button type="button" id="close-editor" aria-label="Fechar">×</button></div><div id="fields"></div><p id="form-error" role="alert"></p><div class="form-actions"><button type="button" id="cancel-editor">Cancelar</button><button class="primary" type="submit">Salvar</button></div></form></dialog>
+<div id="peek" role="tooltip" hidden></div><script type="module" src="app.js"></script>
+</body></html>
