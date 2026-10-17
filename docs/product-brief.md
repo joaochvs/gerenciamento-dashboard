@@ -21,7 +21,8 @@ Prévias do mockup são ilustrativas. Na aplicação, a proposta inicial é cada
 - Prévia maior na parte superior.
 - Menu lateral: tarefas, informações, regras de negócio/documentação, arquivos e histórico.
 - Quadro abaixo da prévia com colunas **Ajustes**, **Iniciado** e **Feito**, conforme desenho do usuário.
-- Criar tarefas manualmente e mover entre etapas; tarefas concluídas continuam visíveis.
+- Criar tarefas manualmente e arrastar cartões entre etapas, sem seletor de status; tarefas concluídas continuam visíveis. No celular, usar alça de arraste; pelo teclado, setas na alça.
+- Manter a abertura atual do dashboard; pop-up foi considerado pelo usuário e adiado. A revisão atual muda somente a interação do quadro.
 - Informações básicas: objetivo, projeto, responsável, link Power BI, frequência esperada e última carga.
 - Histórico separa mudanças no relatório de atualização dos dados.
 - Documentação contém fórmulas, filtros, exceções e regras de negócio. Arquivos vinculados serão detalhados na implementação.

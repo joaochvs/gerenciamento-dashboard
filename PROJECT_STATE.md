@@ -9,5 +9,5 @@ Atualizado em: 2026-10-17.
 - **Problemas conhecidos:** sem CI, build, lint, testes ou deploy. Compatibilidade executável com Vercel não verificável ainda.
 - **Arquitetura atual:** repositório documental; frontend, backend, banco e integrações ausentes.
 - **Dependências importantes:** Git para versionamento; contas/acessos GitHub, Codex Cloud e Vercel para o fluxo externo. Nenhuma dependência de aplicação.
-- **Última mudança relevante:** usuário substituiu a lista inicial por galeria com capturas e quadro por dashboard; demandas externas e portal de solicitantes adiados. Ver docs/product-brief.md e decisão 004.
+- **Última mudança relevante:** interação do quadro revisada para arrastar cartões entre Ajustes/Iniciado/Feito, sem seletor. Abertura atual preservada; pop-up adiado pelo usuário.
 - **Próxima tarefa recomendada:** validar o mockup revisado e definir campos, cadastro manual e critério de atraso; então escolher stack e persistência.
