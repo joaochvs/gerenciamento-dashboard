@@ -2,6 +2,8 @@
 
 Aplicação de teste para organizar dashboards Power BI por projeto: galeria visual, pendências, quadro Ajustes → Iniciado → Feito, regras e histórico. Visual grafite, responsivo e preenchimento interno. Repositório central: [joaochvs/gerenciamento-dashboard](https://github.com/joaochvs/gerenciamento-dashboard).
 
+Interface com temas escuro verde-petróleo e claro lavanda, alternáveis no cabeçalho. Referências e atribuição da skill de design em [docs/design-references.md](docs/design-references.md). Preferência de tema é salva separadamente dos registros.
+
 Leia [AGENTS.md](AGENTS.md), [PROJECT_STATE.md](PROJECT_STATE.md) e [TODO.md](TODO.md) antes de continuar. Escopo em [docs/product-brief.md](docs/product-brief.md), arquitetura em [docs/architecture.md](docs/architecture.md), decisões em [docs/decisions.md](docs/decisions.md) e fluxo entre ambientes em [docs/workflow.md](docs/workflow.md).
 
 ## Stack e instalação

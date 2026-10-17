@@ -9,5 +9,5 @@ Atualizado em: 2026-10-17.
 - **Problemas conhecidos:** sem banco/login/sincronização/integração Power BI; atraso manual; anexos gerais indisponíveis. Dados dependem do navegador/origem.
 - **Arquitetura atual:** public/ estático → localStorage; Node 24 para servidor/build/testes, saída dist/ para Vercel.
 - **Dependências importantes:** nenhuma biblioteca externa de aplicação; Node 24/npm 11.18.0 para ferramentas.
-- **Última mudança relevante:** ação rápida “Marcar como atualizado” com timestamp e histórico persistidos; paleta neutra com destaque violeta, prévias e hierarquia refinadas a partir de referências documentadas em docs/design-references.md.
+- **Última mudança relevante:** aplicação dos princípios relevantes de Revenue-Centric Design e referências do usuário: tema verde-petróleo e alternativa clara lavanda, com preferência persistida; funções e dados existentes preservados. Créditos em docs/design-references.md.
 - **Próxima tarefa recomendada:** testar cadastros, quadro e histórico; revisar campos e atraso antes de planejar banco e login. Deploy Vercel ainda depende da integração da conta.

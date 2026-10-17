@@ -14,3 +14,13 @@ Consultadas em 2026-10-17 para revisar a direção visual após feedback do usu�
 - Atualização dos dados como ação contextual na galeria e dentro do dashboard, com último registro visível e confirmação.
 
 Direção ainda sujeita à avaliação do usuário. Referências inspiram decisões de composição; não introduzem dependências externas, integrações ou regras de negócio.
+
+## Revisão solicitada com Revenue-Centric Design
+
+Referências adicionais do usuário: [Revolut Brasil](https://www.revolut.com/pt-BR/), [Dribbble — web design inspiration](https://dribbble.com/tags/web-design-inspiration) e duas imagens na conversa (interface escura verde-petróleo e composição clara lavanda).
+
+Skill consultada diretamente no repositório [heliocosta-dev/revenue-centric-design](https://github.com/heliocosta-dev/revenue-centric-design/blob/main/SKILL.md), sem instalação global. Créditos dos princípios a Richard [@richardrx](https://x.com/richardrx), compilados pelo repositório. Foram lidos somente os temas relevantes: dashboards e disciplina de funcionalidades. Referência de origem para reduzir informação e direcionar a ação: [Richard, 10/07/2026](https://x.com/richardrx/status/2075623473565647202).
+
+Aplicação: foco na galeria e confirmação de atualização, detalhes por contexto e preservação das funções existentes. A Central BI é ferramenta interna; recomendações de receita, checkout e monetização não foram adicionadas. O tema escuro usa superfícies verde-petróleo com destaque menta; a alternativa clara usa superfícies lavanda e destaque violeta. Tipografia, espaçamento, bordas e hierarquia compartilham os mesmos tokens. Preferência visual fica em central-bi-theme, separada dos dados da aplicação.
+
+Licença da referência: [LICENSE](https://github.com/heliocosta-dev/revenue-centric-design/blob/main/LICENSE). Material source-available com atribuição obrigatória e exclusão de uso em apostas/cassino/jogos de azar. Não foram copiados ativos ou módulos do repositório para o frontend.

@@ -32,6 +32,7 @@
 
 ## Concluído recentemente
 
+- [x] Aplicar referências enviadas pelo usuário e Revenue-Centric Design à hierarquia visual; implementar temas verde-petróleo e claro lavanda.
 - [x] Adicionar confirmação rápida de atualização dos dados com data/hora, estado em dia e histórico preservado.
 - [x] Pesquisar referências de aplicações e revisar paleta, hierarquia e prévias da galeria.
 - [x] Implementar frontend de teste com dados demonstrativos, localStorage, cadastros/edição, captura, arraste e exportação/importação.
