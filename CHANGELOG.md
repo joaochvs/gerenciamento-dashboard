@@ -4,6 +4,7 @@ Registrar somente mudanças relevantes de produto, arquitetura e operação. Peq
 
 ## 2026-10-17
 
+- Criadas propostas visuais Atlas e Focus no Figma, com galeria e tarefas editáveis; aguardando escolha do usuário antes de aplicar ao frontend.
 - Reformulada composição azul e branca com navegação lateral, filtros da biblioteca e abas no dashboard, usando a skill Revenue-Centric Design instalada e as referências do usuário.
 - Revisada direção visual com referências enviadas pelo usuário e princípios de Revenue-Centric Design: tema verde-petróleo, alternativa clara lavanda e preferência visual persistida.
 - Adicionada ação rápida para registrar atualização dos dados com data/hora e histórico; refinados cores, cartões e prévias com referências de interface.

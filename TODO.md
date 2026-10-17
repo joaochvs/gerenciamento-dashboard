@@ -2,6 +2,7 @@
 
 ## Em andamento
 
+- [ ] Comparar Atlas e Focus no Figma e escolher a direção visual; links em docs/figma-proposals.md.
 - [ ] Testar a primeira aplicação: cadastros, captura, tarefas, histórico e exportação/importação.
 - [ ] Conectar os ambientes ao repositório GitHub publicado.
 
@@ -32,6 +33,7 @@
 
 ## Concluído recentemente
 
+- [x] Criar duas propostas Figma com quatro telas desktop editáveis e conferir estrutura e composições visuais.
 - [x] Reformular composição para biblioteca azul/branca com navegação lateral, filtros de pendências/construção e abas no detalhe; validar fluxos e responsividade.
 - [x] Aplicar referências enviadas pelo usuário e Revenue-Centric Design à hierarquia visual; implementar temas verde-petróleo e claro lavanda.
 - [x] Adicionar confirmação rápida de atualização dos dados com data/hora, estado em dia e histórico preservado.

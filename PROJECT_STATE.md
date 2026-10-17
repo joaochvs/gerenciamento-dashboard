@@ -9,5 +9,5 @@ Atualizado em: 2026-10-17.
 - **Problemas conhecidos:** sem banco/login/sincronização/integração Power BI; atraso manual; anexos gerais indisponíveis. Dados dependem do navegador/origem.
 - **Arquitetura atual:** public/ estático → localStorage; Node 24 para servidor/build/testes, saída dist/ para Vercel.
 - **Dependências importantes:** nenhuma biblioteca externa de aplicação; Node 24/npm 11.18.0 para ferramentas.
-- **Última mudança relevante:** reformulação estrutural com skill Revenue-Centric Design instalada: biblioteca azul e branca, navegação lateral com filtros, cartões reorganizados e abas horizontais no detalhe. Funções e registros preservados; tema claro é o padrão da nova direção.
-- **Próxima tarefa recomendada:** testar cadastros, quadro e histórico; revisar campos e atraso antes de planejar banco e login. Deploy Vercel ainda depende da integração da conta.
+- **Última mudança relevante:** criadas duas propostas Figma editáveis (Atlas e Focus), cada uma com galeria e tarefas, sem alteração do frontend. Links em docs/figma-proposals.md e IDs em docs/figma-state.json.
+- **Próxima tarefa recomendada:** comparar as propostas Figma e escolher uma direção antes de continuar a reformulação do frontend. Deploy Vercel ainda depende da integração da conta.

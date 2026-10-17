@@ -1,0 +1,17 @@
+{
+  "runId": "central-bi-proposals-2026-10-17",
+  "scope": "two-concept-screen-studies",
+  "fileKey": "4xC1mN15HxeQZgVOpqxemM",
+  "pageId": "0:1",
+  "frames": {
+    "atlasLibrary": "2:78",
+    "focusLibrary": "2:198",
+    "atlasTasks": "2:315",
+    "focusTasks": "2:386"
+  },
+  "components": { "primaryAction": "2:41", "taskCard": "2:43", "dashboardCard": "2:46" },
+  "collectionId": "VariableCollectionId:2:2",
+  "font": "Manrope",
+  "validation": { "editableLayers": true, "fullUiRasters": 0, "screenshotsReviewed": true },
+  "pending": ["user-selection", "mobile-studies", "interactive-prototype"]
+}
